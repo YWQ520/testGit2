@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+		 <!-- IOC  和   DI -->
+		 <bean id="UserServiceIOC" class="com.factory.service.impl.UserServiceImpl">
+		 	<!-- DI 依赖注入 -->
+		 	<property name="userDao"  ref="UserDaoIOC"/>
+		 </bean>
+		 
+		 <bean id="UserDaoIOC" class="com.factory.dao.impl.UserDaoImpl"/>
+</beans>
